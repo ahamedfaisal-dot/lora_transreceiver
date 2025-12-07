@@ -1,7 +1,7 @@
 #include <SPI.h>
 #include <LoRa.h>
 
-// ========== LoRa Pin Definitions (ESP32) ==========
+
 #define LORA_SCK   18
 #define LORA_MISO  19
 #define LORA_MOSI  23
@@ -9,15 +9,14 @@
 #define LORA_RST   14
 #define LORA_DIO0  26
 
-// ✅ Change to match your module
+//  Change to match your module
 #define LORA_FREQ  433E6   // 433E6 or 866E6 or 915E6
 
-// ✅ LED Pin
+//  LED Pin
 #define LED_PIN    13
 
 String inputText = "";
 
-// ========== LED Blink Function ==========
 void blinkLED(int times, int delayMs) {
   for (int i = 0; i < times; i++) {
     digitalWrite(LED_PIN, HIGH);
